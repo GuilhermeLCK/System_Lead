@@ -1,0 +1,260 @@
+.container-map {
+  position: absolute;
+  top: 5%;
+  height: 100vh;
+  width: 90%;
+  background-color: var(--primary-color);
+  transition: var(--tran-05);
+  height: 90%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+}
+
+.container-search {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 5px;
+  gap: 15px;
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    background-color: #f3f3f3;
+  }
+}
+
+.table {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  padding: 5px;
+
+  .thead {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .th {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 25%;
+      min-height: 45px;
+      text-align: start;
+      padding: 10px;
+      color: #ffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: 1px solid #ffffff48;
+      align-self: stretch;
+      gap: 10px;
+    }
+  }
+
+  .tbody {
+    .tr {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: var(--primary-color-hover);
+      }
+
+      .td {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        min-height: 30px;
+        min-width: 25%;
+        align-self: stretch; /* Adicionando esta propriedade */
+        height: auto;
+        text-align: center;
+        padding: 10px;
+        color: #ffff;
+        font-size: 0.85em;
+        font-weight: 500;
+        border: 1px solid #ffffff48;
+        gap: 10px;
+
+        p {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          cursor: pointer;
+          font-weight: 600;
+
+          &:hover {
+            color: var(--primary-color-light);
+            transform: scale(1.1);
+            transition: 0.4s;
+          }
+
+          :not(:hover) {
+            color: #ffff;
+            transform: scale(1);
+          }
+        }
+
+        .FaWhatsapp {
+          margin-bottom: 1%;
+        }
+      }
+    }
+  }
+}
+
+#td-icon {
+  min-width: 10%;
+}
+
+.total-clients {
+  width: 95%;
+  padding: 10px;
+  align-items: center;
+  justify-content: end;
+  display: flex;
+
+  p {
+    color: #ffff;
+    font-size: 14px;
+    font-family: "Poppins", "Helvetica Neue";
+  }
+}
+
+.table {
+  scrollbar-color: #ffffff #ffffff;
+}
+
+.table::-webkit-scrollbar {
+  width: 1px;
+}
+
+.table::-webkit-scrollbar-track {
+  background-color: var(--primary-color-hover);
+  border-radius: 100px;
+}
+
+.table::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-light);
+  border-radius: 100px;
+}
+
+.container-alphabetical {
+  width: 180px;
+  padding: 10px;
+  padding-block: 10px;
+  border-radius: 10px;
+  top: 60px;
+  right: 0px;
+  position: absolute;
+  background-color: var(--primary-color-light);
+  z-index: 9999;
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    margin: 5px 0;
+  }
+  h2 {
+    font-size: 14px;
+    color: #777777;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+.container-alphabetical.close {
+  display: none;
+}
+@media screen and (max-width: 1300px) {
+  .table {
+    .thead {
+      .th {
+        min-width: 50%;
+      }
+    }
+
+    .tbody {
+      .tr {
+        .td {
+          min-width: 50%;
+        }
+      }
+    }
+  }
+
+  #td-icon {
+    min-width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    .thead {
+      .th {
+        min-width: 90%;
+        font-size: 14px;
+      }
+    }
+
+    .tbody {
+      .tr {
+        .td {
+          min-width: 90%;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  #td-icon {
+    min-width: 35%;
+  }
+  .total-clients {
+    p {
+      font-size: 13px;
+    }
+  }
+  .container-search {
+    button {
+      padding: 7px;
+    }
+  }
+
+  .container-map {
+    top: 2%;
+    height: 95%;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": false,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.tabCompletion": "off",
+  "emmet.preferences": {
+  "emmet.triggerExpansionOnTab": true
+
+  }
+}

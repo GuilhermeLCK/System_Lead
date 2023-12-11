@@ -1,0 +1,207 @@
+.container-QuestionsEditionDb {
+  position: absolute;
+  top: 5%;
+  height: 100vh;
+  width: 90%;
+  background-color: var(--primary-color);
+  transition: var(--tran-05);
+  height: 90%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 3px 5px 16px 3px rgba(0, 0, 0, 0.37);
+}
+
+.container-QuestionsEdition-center {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  padding: 5px;
+  padding-inline: 10px;
+  color: #ffffff;
+  text-align: center;
+  h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    text-align: start;
+  }
+}
+
+.container-title-QuestionsEditionDb {
+  width: 100%;
+  margin-bottom: 15px;
+
+  .title-QuestionsEditionDb {
+    width: 100%;
+    font-size: 30px;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+  }
+}
+.container-questionsArray {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-self: center;
+  flex-direction: column;
+  border: 3px solid rgba(0, 0, 0, 0.26);
+  padding: 10px;
+  gap: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+  h1 {
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+
+  input {
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.144);
+    font-family: "Poppins";
+    overflow-wrap: break-word; /* Adicione esta linha */
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.HandleSalvarPerguntas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 60px;
+  padding: 10px;
+
+  .container-saved {
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    button {
+      background-color: #1c8454;
+      color: #fbfff2;
+
+      &:hover {
+        background-color: #1c8454;
+        transform: scale(1.1);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      &:not(:hover) {
+        transition: background-color 0.3s, transform 0.3s;
+      }
+    }
+  }
+  .container-copy {
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    gap: 15px;
+  }
+
+  button,
+  a {
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    padding-inline: 14px;
+    font-size: 13px;
+    font-family: "Poppins";
+    font-weight: 500;
+    background-color: #fbfff2;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f9ffebee;
+      transition: 0.7s;
+    }
+  }
+}
+
+.container-QuestionsEdition-center {
+  scrollbar-color: #ffffff #ffffff;
+}
+
+.container-QuestionsEdition-center::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container-QuestionsEdition-center::-webkit-scrollbar-track {
+  background-color: var(--primary-color-hover);
+  border-radius: 100px;
+}
+
+.container-QuestionsEdition-center::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-light);
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-title-QuestionsEditionDb {
+    .title-QuestionsEditionDb {
+      font-size: 30px;
+    }
+
+    p {
+      width: 100%;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+  .container-questionsArray {
+    h1 {
+      font-size: 0.9rem;
+      font-family: "Poppins";
+      text-align: start;
+    }
+
+    input {
+      padding: 6px;
+      min-width: 100%;
+      font-size: 0.7rem;
+    }
+  }
+
+  .HandleSalvarPerguntas {
+    .copy-none {
+      display: none;
+    }
+  }
+
+  .container-QuestionsEditionDb {
+    height: 95%;
+    top: 2%;
+  }
+}
