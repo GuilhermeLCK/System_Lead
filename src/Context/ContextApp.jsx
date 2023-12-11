@@ -191,42 +191,6 @@ const FormProvider = ({ children }) => {
     },
   ]);
 
-<<<<<<< HEAD
-=======
-  const [introList, setIntroList] = useState([]);
-
-  async function BuscarIntroSalvar() {
-    const introDocRef = doc(dbBanco, "IntroJS", "Header");
-
-    try {
-      const docSnap = await getDoc(introDocRef);
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        const adaptadoParaVarIntro = data.introListNew
-.map((item) => ({
-          title: item?.title,
-          intro: item?.intro,
-          element:
-            item.element === null || ""
-              ? document.querySelector(item.element)
-              : document.querySelector(item.element),
-        }));
-
-        setIntroList(adaptadoParaVarIntro);
-        console.log(adaptadoParaVarIntro);
-      } else {
-        console.log("O documento não existe!");
-      }
-    } catch (error) {
-      console.error("Erro ao buscar os dados:", error);
-    }
-  }
-
-  useEffect(() => {
-    BuscarIntroSalvar();
-  }, []);
-
->>>>>>> ec9732efe85528b8c23008a97603de4ab166bd22
   return (
     <ContextForm.Provider
       value={{
